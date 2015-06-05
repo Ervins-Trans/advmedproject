@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+		<link rel="shortcut icon" href="favicon.ico" />  
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>macro</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Execute a custom javascript. The custom javascript can be anything from simple game parameter
+					computations to mini-games.</p>
+					<ul class="summary">
+						<li>Note: For advanced users. Requires javascript knowledge.</li>
+						<li>Requires enabling of "gameAllowMacro" in configuration file.</li>
+					</ul>					
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>macro</b>, "function_name"</div></td>
+								<td class="nameDescription"><div class="description">Calls a javascript function given by
+								"function_name".</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>macro</b>, {function_name:param}</div></td>
+								<td class="nameDescription"><div class="description"><span style="color:#C00000">Update:</span>Calls a javascript function given by
+								"function_name" and single argument "param". "param" can be a number, string, boolean, array
+								or object. It shall be passed to the macro call.</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							First, create a javascript function. This function computes the value of
+							a user variable "var3" from the values of two other variables "var1" and "var2".
+						</div>
+						<pre class="code">  
+function demo_macro() {
+	/* User variables are used since macro does not accept parameters. */
+	/* To get value of a user variable, use 'Helper.getValue("variable_name")' */
+	var tmp1 = Helper.getValue("var1");
+	var tmp2 = Helper.getValue("var2");
+	
+	/* To set value of a user variable, use 'Helper.setValue("variable_name", value)' */
+	Helper.setValue("var3", tmp1+2*tmp2);
+	
+	/* Note: Helper.getValue and Helper.setValue are predefined methods.
+	   These methods do not check for existence, so make sure the user
+	   variables are existing prior to access. */
+}
+
+function demo_macro_with_parameter(param) {
+	/* param is passed here as exactly as defined in the macro call */
+}
+						</pre>
+						<div class="description">
+							The above function can be added anywhere in the scripts. To be organized though,
+							it is recommended that all macros be placed in one file, e.g. macros.js. Then, add
+							this file to the TOC.
+						</div>
+						<pre class="code">
+TOC = [
+	"include/config.js",
+	"include/macros.js",
+	
+	"include/story-prelude.js",
+	"include/story-chapter1.js",
+	"include/story-chapter2.js",
+	"include/story-chapter3.js",
+	"include/story-chapter4.js"
+];
+						</pre>
+						<div class="description">
+							Finally to call the macro, just add it to the chapter scripts.
+						</div>
+						<pre class="code">
+chapter = [
+	...
+	/* Initialize 3 user variables */
+	set, {var1:1, var2:2, var3:0},
+	/* Call macro */
+	macro, "demo_macro",
+	/* Result: var3 = 5 */
+	...
+	/* Call a macro with parameter */
+	macro, {demo_macro_with_parameter:[0,1,2,3]},
+]
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

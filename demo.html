@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+			<h1 class="classTitle"><span>VN-CANVAS Demo</span></h1>	
+			</header>	
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Visual Novel</h2>
+						<ul class="filename">
+							<li><a href="demo_vn.html">Ordinary People</a></li>
+							<li>- updated for v.0.4.x</li>
+							<li>- includes new features such as speech balloon and snapshot</li>
+							<li>- includes custom animation set</li>
+							<li>- includes "skip previously read text" function</li>
+							<li>- includes customizable actor stats</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Mod Pack</h2>
+						<ul class="filename">
+							<li><a href="demo_rpg.html">RPG Demo</a></li>
+							<li>- uses Mod-pack vnmod-rpg-0.4.js</li>
+							<li>- requires base engine v.0.4.x</li>
+							<li>- currently supports actors and stats</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Developer</h2>
+						<ul class="filename">
+							<li><a href="demo_tryit.html">Tryit Editor</a></li>
+							<li>- try your script code</li>
+							<li>- based on Tryit Editor by Kevin Zucchini</li>
+							<li>- recommend opening this in new window/tab, so you can use current window/tab for syntax reference</li>
+							<li><br/>Issue: TryIt Editor fails in Opera, but works in Chrome, Firefox and Safari.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Others</h2>
+						<ul class="filename">
+							<li><a href="demo_exam.html">Timed Test</a></li>
+							<li>- a presentation demo using plugins</li><br/>
+							<li><a href="demo_clk.html">Not-So-Precise Clock Demo</a></li>
+							<li>- a graphic animation demo using plugins and macros</li><br/>
+							<li><a href="demo_slide.html">Image Viewer</a></li>
+							<li>- an image slideshow using plugins</li><br/>
+							<li><a href="demo_nav.html">Navigation Demo</a></li>
+							<li>- use map-based or tile-based navigation</li>
+							<li>&nbsp;  - map-based navigation let's you choose locations to go to on a map</li>
+							<li>&nbsp;  - tile-based navigation let's you do old-school dungeon crawling</li>
+							<li>&nbsp;&nbsp;&nbsp;  - tile navigation now supports auto-revealing mini-map</li>
+							<li><a href="demo_frames.html">Animated Sprites Demo</a></li>
+							<li>- use multi-framed filmstrip to create animated sprites and background objects</li><br/>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

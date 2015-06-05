@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>audio</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Play a sound or music.
+						<ul class="summary">
+							<li><span style="color:#C00000">Update:</span> The audio volume can be set in configuration file.</li>
+						</ul>					
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>audio</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Play a sound or music.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>bgm</b>:"path_to_sound_file_no_extension"</div>
+										<div class="fixedFont"><b>bgs</b>:"path_to_sound_file_no_extension"</div>
+										<div class="fixedFont"><b>se</b>:"path_to_sound_file_no_extension"</div>
+										<div class="description">Set the type of audio as one of the given types: 
+											background music (bgm), background sound (bgs) or sound effect (se). <br/>
+											Specify the full path on first time play. Can specify just filename 
+											on next actions as long as the filename is unique.<br/>
+											BGMs are looping and auto-replaced on new BGM. <br/>
+											BGS are also looping but multiple BGS can be played simultaneously. <br/>
+											SEs are non-looping and multiple SE can be played simultaneously.<br/>
+											<span style="color:#C00000">Update:</span> Now accepts a user variable as
+											path to the sound files, still without extension.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes"><strike>Required only on first play</strike> Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>format</b>:[array_of_formats]</div>
+										<div class="description">Engine autodetects which of the given formats 
+											is playable on the platform. For maximum compatibility with all browsers, 
+											provide multiple formats for the audio (typically, "ogg" and "mp3").<br/>
+											<span style="color:#C00000">Update:</span> Default audio formats can now
+											be set in Config file and are used if format is not given.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>action</b>:"action_name"</div>
+										<div class="description">Perform the given action on the audio file. <br/>
+											Valid actions are "play", "stop", "rewind", "pause", "remove". <br/>
+											Default action if not specified is "play".<br/>
+											"remove" is only applicable for "se" and "bgs". "bgm" is automatically
+											removed on instantiation of next "bgm".
+											</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>repeat</b>:number</div>
+										<div class="description">Number of times to repeat when playing SE.
+											If not specified, default value is 0 or no repeat.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>delay</b>:number</div>
+										<div class="description">Number of seconds to wait before an audio is
+											played. If not specified, default value is 0 or no delay.<br/>
+											When used with repeat, it also acts as interval between plays.
+											</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							A series of audio files will be played as given below.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	/* plays audio1 as BGM and chooses among the given which format is playable */
+	audio, {bgm:"media/audio1", format:["ogg","mp3"]},
+	...
+	/* pauses the play of BGM, note format and full path are not required for
+	subsequent actions */
+	audio, {bgm:"audio1", action:"pause"},
+	...
+	/* replace BGM with a new one after a 2 second delay */
+	audio, {bgm:"media/audio2", format:["ogg"], delay:2},
+	...
+	/* play 2 BGS simultaneously */
+	audio, {bgs:"media/audio3", format:["mp3"]},
+	audio, {bgs:"media/audio4", format:["wav"]},
+	...
+	/* stops audio3, note since multiple BGS can be played, need to
+	identify which BGS on subsequent actions, also note that the
+	full path no longer need to be specified */
+	audio, {bgs:"audio3", action:"stop"},
+	...
+	/* play a SE 10 times with 1 second interval between play,
+	note also that to play 10 times, repeat it 9 times */
+	audio, {se:"media/audio5", format:["ogg"], repeat:9, delay:1},
+	...
+	/* remove audio3 from the list, this does not affect gameplay
+	but is useful for memory management if the audio is no longer needed */
+	audio, {bgs:"audio3", action:"remove"},
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

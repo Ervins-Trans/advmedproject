@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>tile</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Create old-school dungeon crawling navigation... or maze... or forest... or mansion...
+					<ul class="summary">
+						<li>Should be used with a cform displaying navigation buttons.</li>
+						<li>Uses three reserved user variables: <br/>"_nav_loc" for the current location,<br/>
+						"_nav_dir" for the facing direction,<br/> and "_nav_move" for the player movement.</li>
+					</ul>
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>tile</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Define a tile for navigation.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>id</b>:"tile_id"</div>
+										<div class="description">The id of the tile.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>wall</b>:[array_of_wall_images]</div>
+										<div class="description">Defines the four wall images of the
+										tile, in north, east, south and west (or clockwise) order.<br/>
+										Note that wall does not necessarily mean a solid wall, but simply
+										an image/backdrop that is displayed when the player is facing
+										said direction.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>link</b>:[array_of_labels]</div>
+										<div class="description">This determines where to jump to
+										when the player moves in the given direction. <br/>The order in
+										the array corresponds to the wall order, i.e. north, east, south,
+										and west order.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>map</b>:[x_position, y_position]</div>
+										<div class="description">When automap is used, this defines the
+										position of the current tile.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							First, declare a cform navigation controller using buttons. Up arrow moves the player forward.
+							Down arrow moves the player back. Left and Right arrows turns the player counterclockwise
+							and clockwise, respectively.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	cform, [ "nav_tile", false, 
+		button, {name:"nav_up", x:540, y:240, base:"arrows-up.png", link:[set, {_nav_move:"forward"}], showText:false	},
+		button, {name:"nav_down", x:540, y:380, base:"arrows-down.png", link:[set, {_nav_move:"back"}], showText:false	},
+		button, {name:"nav_left", x:480, y:300, base:"arrows-left.png", link:[set, {_nav_move:"left"}], showText:false	},
+		button, {name:"nav_left", x:620, y:300, base:"arrows-right.png", link:[set, {_nav_move:"right"}], showText:false	},
+	],
+	...
+];
+						</pre>
+						<div class="description">
+							This creates a cform with four buttons. Clicking on the button sets the "_nav_move"
+							variable as to the type of player movement.<br/>
+							As the cform is a non-modal cform, it just stays on the screen and responds to user click
+							anytime.<br/><br/>
+							Next define the tileset of the dungeon... or maze... or mansion... This also gives a
+							visual as to the walls needed, which tile is next to which tile, etc.<br/>						
+						</div>
+						<pre class="code">  
+						<img src="tileset.jpg" border="none" align="left"></img>
+						</pre>
+						<div class="description">
+							Finally, create a definition for each tile. Below is a definition of tile T1.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	label, "T1",
+	tile, {id:"T1",
+		wall:["wall1n.jpg", "wall1e.jpg", "wall1s.jpg", "wall1w.jpg"],
+		link:["T1", "T3", "T1", "T1"]
+	},
+	/* do some stuff here, hide/show cform if necessary */
+	wait, 0, /* see note below on flow control */
+	jump, "T1",
+	...
+
+];
+						</pre>
+						<div class="description">
+							The walls are declared as in the diagram. The links are followed when the forward
+							and back buttons are clicked. Note that a link to itself, i.e. T1, causes it to
+							jump back to itself, since player can not move in that direction anyway.<br/>
+							Note also that "tile" is merely a definition and does not pause/stop script execution.
+							So make sure to use flow controls or elements that pauses execution, such as "text".
+							In the above construct, without the "wait" statement, the loop will execute continuously
+							when the navigation buttons are not pressed or the player stays at T1.<br/><br/>
+							For a complete example, see Navigation Demo.
+						</div>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+			<h1 class="classTitle"><span>VN-Canvas for HTML5</span></h1>	
+			<div class="intro">
+				<p class="description summary">A javascript visual novel engine for HTML5 Canvas.</p>
+				<ul class="summary">
+					<li>Current version: 0.4.0 (Chelsea)</li>
+				</ul>
+			</div>
+			</header>	
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Features</h2>
+						<ul class="summary">
+							<li>Takes advantage of new HTML5 features, <strike>e.g. canvas and audio tags (with more
+								on the way including video, local file access and forms)</strike>, as compared to other 
+								engines such as <a href="https://github.com/jdeisenberg/js-vine">
+								JS-ViNE: A JavaScript Visual Novel Engine</a> by J. David Eisenberg which uses
+								mostly standard HTML4 elements.</li><br/>
+							<li>Targeted specifically for visual novels, so it contains none of the overhead
+								caused by extra features (which visual novels aren't going to use anyway) in
+								generic game engines, such as <a href="http://www.scirra.com">Construct2 - HTML5 game creator</a>
+								by Scirra Ltd. and <a href="http://enchantjs.com">Enchant Javascript Game engine</a> 
+								by Ubiquitous Entertainment Inc.</li><br/>
+							<li>Simple enough to use even by non HTML and/or javascript programmers. A game maker
+								or story teller need only concern himself with the story itself, like directing
+								a movie or play.</li><br/>
+							<li>Cross platform on any HTML5-capable browser without the need for additional
+								plugins or extensions. That means, it should run on Windows, Mac, Android, or anywhere 
+								these modern browsers run on. (Have only tested though on Firefox, Chrome, Opera and 
+								Safari on WinXP, sometimes Opera mobile and Android emulators,
+								so if you're willing to give it a shot on the other browsers, feel free and 
+								please give me feedback.)</li><br/>
+							<li>Resources (e.g. images, audio) are loaded on-the-fly and not preloaded at the
+								start. So you don't have to wait 5 minutes watching a progress bar that gets stuck
+								at 88%. There will be lags however in between frames as resources get loaded,
+								but with faster internet connections or even offline play, these will hardly be
+								noticeable.</li><br/>
+							<li>Best of all, it's built using free tools at zero budget. :)</li><br/>
+							<li>Additional notes to the game developer:<br/>
+								- Feel free to modify to your heart's content, while keeping the copyright info, of course.<br/>
+								- For performance considerations, scriptline checking is deliberately kept at a bare minimum.
+								That means, making sure the scriptline is correct is the developer's responsibility.
+								The engine directly executes the scriptline to minimize execution delay, as compared to going
+								thru tons of validation checking.<br/>
+								- It is recommended to have a javascript console open when developing the script. It's not unusual
+								to misspell or miss a comma, colon, quotes or brackets. The console is your friend.<br/>
+								- It is also recommended that all javascripts be minified with or without obfuscation prior to
+								deployment. This not only improves loading time, but also makes it a little bit harder
+								for players to take a peek at the story endings.<br/>
+								- <strike>As of the current version, saves are not yet implemented. So refreshing/reloading the page
+								puts the game back to start.</strike>Checkpoints are now implemented.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Known Limitations</h2>
+						<ul class="summary">
+							<li>The following is a list of known limitations. Some of these have been
+								verified; some have been documented in a reference material somewhere; some have
+								been observed by others. Currently, no fallbacks for these have been
+								implemented, and possibly many will not have fallbacks. So please use
+								with caution.</li><br/>
+							<li>Different browsers have different implementation of form elements. Some
+								browsers (e.g. Firefox) do not implement the new form elements (as of the time of this writing).</li><br/>
+							<li>Some browsers designed for mobiles (e.g. Opera Mobile and Safari/iOS) may limit 
+								bandwidth and/or memory and cache usage. So resources, such as large images, exceeding whatever 
+								browser limit there is, may not display/render, if it is even loaded at all. Safari/iOS
+								also limits audio stream play for bandwidth consideration.</li><br/>
+							<li>Safari on iOS devices do not support audio/video preloading, as well as video-on-canvas, 
+								according to some reference.</li><br/>
+							<li>Some tests done on an Android device report that the demo/script doesn't work, even
+								though apparently it works on the Android SDK (4+ platform). If you absolutely must on an
+								Android device, there's always <a href="http://www.phonegap.com">PhoneGap</a>. :)</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Revision History</h2>
+						<pre class="code">
+Revision history:
+Version 0.4 Chelsea
+02.19.13 - "actor" support for animated avatars
+02.17.13 - Bugfix: fix size and position of multiple sprites
+02.10.13 - "actor" support for animated sprites
+02.07.13 - "scene" support for animated objects
+12.29.12 - 'menu' support for user variable set, in addition to jump to label
+12.24.12 - Support _range attribute for actor stats
+	 - Support '$' prepend on jump labels, to skip push on frame stack
+12.01.12 - Prep for RPG MOD Pack
+Version 0.3 Brenda
+10.12.12 - Bugfix: touch devices reset fix (courtesy of Turker Yasa)
+05.15.12 - Added 'random' generator for user variables
+	 - Added a parameter to 'macro' calls
+	 - Added multiple conditions for 'jump' 
+05.04.12 - Added auto-revealing map to 'tile' navigation
+	 - Bugfix: local storage persist flag fix
+04.23.12 - Optimized 'skip' text storage
+	 - Bugfix: sprite reuse using tags
+	 - Support multiple avatars reuse thru tags
+	 - Added screen action 'fall'
+04.22.12 - Added actor 'stats' plugin
+04.17.12 - Added 'skip read text' function for quick replay
+	 -   not thoroughly tested, use with caution
+	 - Added toggle mode for 'button'
+04.14.12 - Added lookAhead option to preload next resources while idle
+	 - Converted 'timer' cform element to a generic text display element
+	 - Bugfix: added actor 'voice' to auto preload
+	 - Bugfix: added Config-defined format in auto preload
+	 - Bugfix: repeat 'animation' fix
+04.10.12 - Added 'map' and 'tile' navigation
+04.06.12 - Added custom 'animation' set
+	 - Added tryit editor for developers (in demo section)
+	 - Bugfix on movement effects (broken due to 'nowait')
+Version 0.2 Althea
+03.06.12 - Added 'z_order' for actor
+	 - Setting a variable to null deletes it
+	 - Support persistent user variable
+	 - Support multiple named 'checkpoints'
+03.04.12 - Added screen actions 'shake', 'snap'
+03.01.12 - Added speech 'balloon' in actor
+	 - Added arrays in user variables
+02.28.12 - Added 'voice' dub in-sync with dialog
+	 - Added 'nowait' argument to effects
+02.27.12 - Expand user variables for more active use
+	 - Several bugfixes
+02.24.12 - Recode 'cform' (to be plugin-ready)
+02.21.12 - Improved memory handling (avoid leaks ?)
+	 - Modify Vector2d class
+02.13.12 - Recode 'atmosphere' (to be plugin-ready)
+02.12.12 - Recode effects (to be plugin-ready)
+02.10.12 - Recode 'box', script, stage and 'button'
+	 - Added 'preload'
+	 - Selectable 'video-on-canvas' or 'video-element'
+02.09.12 - Added vector2d class (in anticipation of some future features)
+	 - Optimized 'particles' for performance
+	 - Recode 'scene', 'overlay'
+	 - Recode 'actor'
+02.06.12 - Recode 'user variables'
+	 - Recode 'audio', 'video'
+	 - Recode 'form'
+	 - Bug fix for iOS user inputs
+02.05.12 - Recode for "cleaner" encapsulation thru functional inheritance
+	 - Recode 'atmosphere'
+Version 0.1 Preview
+02.02.12 - Added atmosphere 'snow', 'rain' direction
+01.31.12 - Updated cutscene/movie to play in canvas
+	 - Optimized method encapsulation
+01.28.12 - Bugfix for non-modal dialog while checkpoint loading
+	 - Bugfix for cross-browser compatibility (re:image constructor)
+	 - Added timer cform element
+	 - Added animated picture cform element						
+01.25.12 - Added macro for custom javascript
+01.12.12 - Updated scene and overlay to accept HTML color
+	 - Updated button (cform) to accept HTML color
+	 - Optimized memory footprint (a bit)
+01.11.12 - Added word filter
+	 - Added URL jump
+	 - Simplified atmosphere, added cloud and beam						
+01.09.12 - Added themes
+	 - Forms can be instantiated in-game
+01.06.12 - Implemented text effects
+01.04.12 - Bug fix: avatar, checkpoint
+	 - Implemented additional actor effects
+	 - Implemented additional overlay effects
+	 - Implemented additional background effects						
+12.30.11 - Simplified 'audio'						
+12.29.11 - Added configuration file (just the basics)
+12.28.11 - Added a subset of HTML forms
+12.26.11 - Simplified 'set' and 'jump'
+12.25.11 - Added actor avatar
+	 - Updated checkpoint saves to include avatar and forms
+12.24.11 - Added video for intros, cutscenes, endings
+12.21.11 - Added cforms (buttons only... so far)
+12.20.11 - Added basic saves using checkpoint
+12.08.11 - Added overlay and atmosphere basics
+12.06.11 - Added actor basics
+12.05.11 - Added script box, flow control using jump
+12.01.11 - Basics for background image, music/sounds, flow control using wait
+11.27.11 - Initial creation
+						</pre>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">References</h2>
+						<ul class="summary">
+							<li><a href="https://github.com/jdeisenberg/js-vine">JS-ViNE</a>: A JavaScript Visual Novel Engine</li>
+							<li><a href="http://www.scirra.com">Construct2</a> - HTML5 game creator</li>
+							<li><a href="http://enchantjs.com">Enchant</a> Javascript Game engine</li>
+							<li><a href="http://www.renpy.org">Ren'Py</a> Python Visual Novel engine</li>
+							<li><a href="http://www.canvastext.com">CanvasText</a> by Pere Monfort Pamies</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Contact Info</h2>
+						<ul class="summary">
+							<li>&#169; 2011&#8211;12 <a href="mailto:oclabbao@gmail.com">[lo'ner]</a></li>
+							<li><a href="http://code.google.com/p/vn-canvas/">http://code.google.com/p/vn-canvas/</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">License</h2>
+						<ul class="summary">
+							<li>VN-Canvas is licensed under <a href="http://creativecommons.org/licenses/LGPL/2.1/">CC-GNU LGPL</a> and
+							<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ph/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 License</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

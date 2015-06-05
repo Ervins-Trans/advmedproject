@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>cform</span></h1>	
+				<div class="intro">
+					<p class="description summary">Creates a container for canvas forms elements. All cforms are placed
+					on a stack.</p>
+					<ul class="summary">
+						<li>Note: Technically, you can add any element to a cform, but limit usage to actual
+							cform elements (e.g. button).</li>
+						<li>Cform is a canvas form to emulate the default HTML form. To create a default form, use 'form'.</li>
+					</ul>
+					<img src="forms.jpg" border="none"></img>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>cform</b>, [array_of_elements]</div></td>
+								<td class="nameDescription"><div class="description">Create a form layout.<br/>
+								Upon creation, the cform is automatically shown.<br/>
+								The array is arranged as follows:<br/>
+								- First entry is a form_id to identify the cform.<br/>
+								<span style="color:#C00000">Update:</span><br>- Second entry indicates modal or non-modal form.
+								Modal forms pause execution when shown, while non-modal forms (useful for HUDs and image
+								maps) does not block execution and continues to next line.<br/>
+								- Next entries are element-parameters pair. (see forms elements)
+								</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>cform</b>, "action"</div></td>
+								<td class="nameDescription"><div class="description">Performs given action on the 
+								form on top of the stack.<br/>
+								Valid actions are: "show", "hide", "close", "default"<br/>
+								"close" removes it from the stack.<br/>
+								"default" reverts back to the style in configuration file.
+								</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>cform</b>, "CSS_font_style"</div></td>
+								<td class="nameDescription"><div class="description">Sets a global style for all forms.<br/>
+								Declare as "weight size font-family color" in the given order.<br/>
+								<span style="color:#C00000">Update:</span> The default cform style can be set in configuration file.
+								</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>cform</b>, "form_name"</div></td>
+								<td class="nameDescription"><div class="description">Puts the given form on top of
+								the stack and shows it. (May or may not be useful.)
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							This sets a global style for the form font, then creates a form that allows the user to
+							start a new game, continue from a previous save, or set options.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	label, "start",
+	/* This line sets the font style */
+	cform, "bold 16px 'Courier New' #404040",
+	/* This creates a form named "top_menu".
+	   Game execution is paused when a form is shown.*/
+	cform, [ "top_menu", true,
+		button, {name:"New Game", x:360, y:300, base:"base.png", hover:"hover.png", link:[jump, "intro"]},
+		button, {name:"Continue", x:360, y:350, base:"base.png", hover:"hover.png", link:[jump, "restore"]},
+		button, {name:"Options", x:360, y:400, base:"base.png", hover:"hover.png", link:[jump, "option"]},
+	],
+	
+	label, "option",
+	/* Set options here, form is not hidden or closed, then returns back to start */
+	jump, "start",
+	
+	label, "restore",
+	/* Form is closed, then saved game is loaded here */
+	cform, "close",
+	checkpoint, "load",
+
+	label, "intro",	
+	/* Form is hidden here, then continues to start a new game */
+	cform, "hide",
+	/* Start a new game */
+	...
+];
+						</pre>
+						<div class="description">
+							The following is a non-typical use of forms as an imagemap. This uses an overlay image to create a map,
+							then uses a form with buttons to indicate locations the user can select.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	overlay, {image:"map.jpg"},
+	cform, [ "map", false,
+		button, {name:"Location1", x:100, y:100, base:"location1.png", showText:false, link:[set, {goTo:"location1"}]},
+		button, {name:"Location2", x:200, y:100, base:"location2.png", showText:false, link:[set, {goTo:"location2"}]},
+		button, {name:"Location3", x:200, y:200, base:"location3.png", showText:false, link:[set, {goTo:"location3"}]},
+	],
+	...
+	/* the form is just hidden, so it can be used again later. */
+	cform, "hide",
+	
+	/* after selection, check "goTo" variable to get where player wants to go */
+	jump, {goTo:"location1", label:"go_to_location1"},
+	jump, {goTo:"location2", label:"go_to_location2"},
+	jump, {goTo:"location3", label:"go_to_location3"},
+	...
+	label, "go_to_location1",
+	...
+	label, "go_to_location2",
+	...
+	label, "go_to_location3",
+	...
+];
+						</pre>
+						<div class="description">
+							Note that by just hiding the form (instead of close) and not using fixed jumps in the links portion 
+							(as in the first example), this imagemap can be shown later, and then the user variable checked again 
+							to jump at a different label location.
+						</div>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

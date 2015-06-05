@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>Configuration file</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Contains configuration options and any number of theme sets.
+						<ul class="summary">
+							<li>For a sample, see configuration file template.</li>
+							<li>More options to follow in future versions.</li>
+						</ul>					
+					</p>
+				</div>
+			</header>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Themes</caption>
+							<thead>
+								<tr>
+									<th scope="col">Parameter</th>
+									<th scope="col">Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">formStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default styling for the canvas forms.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">formTipStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default styling for tool tips.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">formTipColor</td>
+									<td class="nameDescription">
+										<div class="description">The default background color for tool tips.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">formElementBack</td>
+									<td class="nameDescription">
+										<div class="description">The default background color for non-image elements.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxFontStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default font styling for the dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxDimStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default solid or gradient fill for the
+											dim-style dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxImageStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default image file for the
+											image-back dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxTagStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default font styling for the actor name
+											tag shown on the dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxMenuHilite</td>
+									<td class="nameDescription">
+										<div class="description">The default highlight color for the menu (options)
+											on the dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">balloonFillStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default fill style for the speech balloon.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">balloonStrokeStyle</td>
+									<td class="nameDescription">
+										<div class="description">The default outline style for the speech balloon.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">automapMask</td>
+									<td class="nameDescription">
+										<div class="description">The default fill color for hidden automap positions.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">automapPointer</td>
+									<td class="nameDescription">
+										<div class="description">The default fill and stroke color for the automap pointer.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Config</caption>
+							<thead>
+								<tr>
+									<th scope="col">Parameter</th>
+									<th scope="col">Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">themeList</td>
+									<td class="nameDescription">
+										<div class="description">The listing for all supported themes. This configuration
+											variable can be used by dropdown elements in a form to display available
+											themes. Declare as name-theme pair.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">activeTheme</td>
+									<td class="nameDescription">
+										<div class="description">The currently active theme.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">volumeAudio</td>
+									<td class="nameDescription">
+										<div class="description">The maximum volume for all audio sounds.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">volumeVideo</td>
+									<td class="nameDescription">
+										<div class="description">The maximum volume for all videos.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxWidth</td>
+									<td class="nameDescription">
+										<div class="description">The width of the default dialog box relative
+											to viewport width.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxHeight</td>
+									<td class="nameDescription">
+										<div class="description">The height of the default dialog box relative
+											to viewport height.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxFullHeight</td>
+									<td class="nameDescription">
+										<div class="description">The height of the full dialog box relative to
+											viewport height.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">boxScrollSpeed</td>
+									<td class="nameDescription">
+										<div class="description">The speed of the scrolling text relative to a
+											preset speed. The higher the value, the faster the scrolling.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">balloonWidth</td>
+									<td class="nameDescription">
+										<div class="description">The width of the speech balloon relative
+											to viewport width.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">balloonHeight</td>
+									<td class="nameDescription">
+										<div class="description">The height of the speech balloon relative
+											to viewport height.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">actorShowAvatar</td>
+									<td class="nameDescription">
+										<div class="description">Show the actor avatar on the dialog box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">actorPerspective</td>
+									<td class="nameDescription">
+										<div class="description">Emulate depth perspective on mouse move.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">actorYPosition</td>
+									<td class="nameDescription">
+										<div class="description">The vertical position of the actor sprite
+											relative to viewport height. A value of 1 pins the actor at viewport
+											bottom. If actorPerspective is on, a value > 1 is recommended.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">audioFormat</td>
+									<td class="nameDescription">
+										<div class="description">The audio formats supported.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">movieSize</td>
+									<td class="nameDescription">
+										<div class="description">The video size relative to the viewport.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">movieOnCanvas</td>
+									<td class="nameDescription">
+										<div class="description">Plays video on canvas.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">movieFormat</td>
+									<td class="nameDescription">
+										<div class="description">The video formats supported.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">transTime</td>
+									<td class="nameDescription">
+										<div class="description">The approximate number of seconds for transitions.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameAllowMacro</td>
+									<td class="nameDescription">
+										<div class="description">Allows custom game-specific javascript to execute.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameAllowPreload</td>
+									<td class="nameDescription">
+										<div class="description">Allows game-specific resource preloading.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameAllowLookAhead</td>
+									<td class="nameDescription">
+										<div class="description">As an alternative to specified or automatic preloading, 
+										this allows "look ahead" to look for the next or most immediately needed resources 
+										for preloading while the game is idle.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameNamedCheckpts</td>
+									<td class="nameDescription">
+										<div class="description">Allows use of named checkpoints</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameMatureFilter</td>
+									<td class="nameDescription">
+										<div class="description">Filtering for mature content.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameBadWords</td>
+									<td class="nameDescription">
+										<div class="description">In addition to manual filtering using "jump",
+										this list the words that are automatically filtered if gameMatureFilter is on.
+										The word is replaced by gameAltWord.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">gameAltWord</td>
+									<td class="nameDescription">
+										<div class="description">The text to replace automatically filtered words.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+
