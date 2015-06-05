@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>button</span></h1>	
+				<div class="intro">
+					<p class="description summary">A cform element using images to act as button.</p>
+					<ul class="summary">
+						<li>Note: Use only on a 'cform', not a 'form'</li>
+						<li>Instantiating cform elements without using "cform" is not recommended.</li>
+					</ul>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>button</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Creates a button.<br/>
+								Parameters are given as {param:value, param:value, ...}
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>name</b>:"button_text"</div>
+										<div class="description">This sets the text on the button, which is also
+										the button id.<br/><span style="color:#C00000">Update:</span> If the
+										name contains the string "toggle" (e.g. toggle1, toggle_option, etc.),
+										the button acts in toggle mode, where the "clicked" state is held. For
+										best results, make the "click" image different from "base" image.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>x</b>:offset_from_top_left</div>
+										<div class="description">Horizontal position of the button from the
+										top-left of viewport window.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>y</b>:offset_from_top_left</div>
+										<div class="description">Vertical position of the button from the
+										top-left of viewport window.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>w</b>:width</div>
+										<div class="description">Width of button. If base images are provided,
+										this parameter is ignored.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>h</b>:height</div>
+										<div class="description">Height of button. If base images are provided,
+										this parameter is ignored.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>base</b>:"path_to_base_image_of_button"</div>
+										<div class="fixedFont"><b>base</b>:"valid_HTML_color"</div>
+										<div class="description">This is the default image or color of the button.<br/>
+											Valid HTML colors may be specified as "string" (e.g. "red"), "hex" (e.g. "#RRGGBB"),
+											"rgb(rr,gg,bb)" or "rgba(rr,gg,bb,aa)".
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>hover</b>:"path_to_hover_image_of_button"</div>
+										<div class="fixedFont"><b>hover</b>:"valid_HTML_color"</div>
+										<div class="description">This is the hover image of the button. If not given,
+										the base image is used.<br/>
+											Valid HTML colors may be specified as "string" (e.g. "red"), "hex" (e.g. "#RRGGBB"),
+											"rgb(rr,gg,bb)" or "rgba(rr,gg,bb,aa)".
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>click</b>:"path_to_click_image_of_button"</div>
+										<div class="fixedFont"><b>click</b>:"valid_HTML_color"</div>
+										<div class="description">This is the image of the button when clicked. If not
+										given, the base image is used.<br/>
+											Valid HTML colors may be specified as "string" (e.g. "red"), "hex" (e.g. "#RRGGBB"),
+											"rgb(rr,gg,bb)" or "rgba(rr,gg,bb,aa)".
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>showText</b>:boolean (true/false)</div>
+										<div class="description">Shows text at button center if true. No text if false.
+										Default is true.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>link</b>:[keyword-value pair]</div>
+										<div class="description">The value of link is executed if the button is clicked.<br/>
+										The keyword-value is exactly as you would declare it in a scriptline but enclosed in
+										square brackets ([...]).<br/>
+										If link is not given, nothing happens on a user click.<br/>
+										Note: Technically, any keyword-value is allowed, but use only those keywords
+										needed for flow control, such as "jump" and "set". "message" can also be used.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>tip</b>:"tool_tip_to_display"</div>
+										<div class="description">The tooltip to display when mouse hovers
+										over the button.
+										</div>
+									</td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>			
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							This creates an "Options" button at location [360, 400], uses the given images depending on the
+							button state, and displays a message when clicked.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	button, {name:"Options", x:360, y:400, 
+		base:"base.png", 
+		hover:"hover.png", 
+		click:"click.png", 
+		link:[message, "Not yet implemented!"]},
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

@@ -1,0 +1,11 @@
+body {
+	margin:0;
+	padding:0;
+	background-color:#2B1B17;
+}
+
+#stage {
+	margin:200px auto;
+	background-color:white;
+	display:block;
+}

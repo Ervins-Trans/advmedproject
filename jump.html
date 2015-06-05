@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>jump</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Script jumps to specified label.
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>jump</b>, "label_name"</div></td>
+								<td class="nameDescription"><div class="description">Unconditional jump.<br/>
+								Label name can take the following forms:<br/>
+								"label" - a label in the current chapter.<br/>
+								"chapter#label" - a label in the given chapter.<br/><br/>
+								<span style="color:#C00000">Update:</span><br/>
+								"return" - a special label that allows return to previous jump call. Use for returning
+								from calling in-game option forms (see demo sample).<br/><br/>
+								hyperlink - if parameter is a URL, opens the
+								link on a new window. Use, for example, on image-based ads. To use this however,
+								popups must not be blocked.<br/><br/>
+								"$label" - if the label is prepended with a $ sign, the jump will be executed but will
+								not be pushed into the frame stack. Useful if you don't want to remember a jump.
+								</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>jump</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Conditional jump.<br/>
+								Execution jumps to given label if condition is true.<br/>
+								Parameters are given as {param:value, param:value, ...}
+								</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>name</b>:comparison_value</div>
+										<div class="description">Compares variable given by 'name' to 'value' given.<br/>
+										<span style="color:#C00000">Update:</span> Both User and Config variables are now supported.<br/>
+										<span style="color:#C00000">Update:</span> Multiple conditions are now supported. This is an AND
+										condition, meaning all comparison must result to <strong>true</strong>.<br/><br/>
+										If type of variable is a number, checks if variable is <strong>greater than or equal</strong> to the value given.<br/>
+										If type of variable is a string, performs a <strong>case-sensitive</strong> comparison if the string is the same as value.<br/>
+										If type of variable is boolean, compares if <strong>same</strong> as value.<br/>
+										Note: The actual value of variable is not changed.<br/>
+										TODO: do we need conditions other than user variables to check??
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>label</b>:"label_name"</div>
+										<div class="description">Label to jump to if condition is true.<br/>
+										Label takes the forms described above.
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>			
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							The first unconditional jump call moves the game to "label1". The second jump call moves to the next chapter at label "start".
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	jump, "label1",
+	...
+	label, "label1",
+	...
+	jump, "next_chapter#start",
+	...
+];
+						</pre>
+						<div class="description">
+							This conditional jump compares "uservar1" with value given and since 5 is greater than 2, jumps to label2.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	set, {uservar1:5},
+	...
+	jump, {uservar1:2, label:"label2},
+	...
+	// script lines here are skipped
+	...
+	label, "label2",
+	...
+];
+						</pre>
+						<div class="description">
+							<span style="color:#C00000">Update:</span> This conditional jump checks "uservar1", "uservar2" and "uservar3" against the given condition, jumps to label2
+							if all are true.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	set, {uservar1:5, uservar2:true, uservar3:"hello"},
+	...
+	jump, {label:"label2", uservar1:2, uservar2:true, uservar3:"hello"},
+	/* the following are checked:
+		uservar1 >= 2 (value is 5)
+		uservar2 == true (value is true)
+		uservar3 == "hello" (value is "hello")
+	*/
+	...
+	// script lines here are skipped since all conditions are true
+	...
+	label, "label2",
+	...
+];
+						</pre>
+						<div class="description">
+							This conditional jump compares configuration variable "gameMatureFilter" to skip mature contents.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	jump, {gameMatureFilter:true, label:"skip},
+	...
+	// mature content here are skipped if
+	// MatureFilter is on
+	...
+	label, "skip",
+	...
+];
+						</pre>
+						<div class="description">
+							Though these may not be particularly useful for visual novels, loops can be constructed using special 
+							constructs with label, user variables and conditional jumps. Note: the user variables can either be
+							boolean to check for true/false, or number that can be incremented/decremented.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	/* This loop checks user variable first before executing the loop. */
+	set, {user_var:0},
+	label, "loop_start1",
+	jump, {user_var:10, label:"loop_end1"},
+
+	// Do some things here
+
+	set, {user_var:"+1"),
+	jump, "loop_start1",
+	label, "loop_end1",
+	...
+	/* This loop executes at least once before user variable is checked */
+	set, {user_var:10},
+	label, "loop_start2",
+	
+	// Do some things here
+	
+	set, {user_var:"-1"),
+	jump, {user_var:0, label:"loop_start2"},
+	label, "loop_end2",
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

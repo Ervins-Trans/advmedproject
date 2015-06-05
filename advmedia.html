@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Game</title>
+    <meta name="description" content="Advanced media project" />
+    <link rel="stylesheet" href="advmedia/style.css" />
+  </head>
+  <body>
+    <canvas id="stage" width="960" height="540" oncontextmenu="return false;" onselectstart="return false;">
+        Your browser does not support HTML5.  Try upgrading your browser to the latest version.<br/>
+      </canvas>
+
+    <script src="advmedia/story-toc.js"></script>
+    <script src="templates/canvastext-0.4.1.mod.js"></script>
+    <script src="templates/vncanvas-0.3.js"></script>
+    <script src="advmedia/config.js"></script>
+    <script src="advmedia/chapter1.js"></script>
+
+    <script>
+      window.onload = function() {
+        Stage.Init("stage", 960, 540);
+        Stage.script.Init(CHAP1);
+      }
+    </script>
+
+  </body>
+</html>

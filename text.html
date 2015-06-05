@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>text</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Displays dialog or narration text in script box.
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>text</b>, "text_to_display"</div></td>
+								<td class="nameDescription"><div class="description">Displays text in script
+								box. Uses previous settings. Pauses game by waiting for user input.
+								This is actually a shortcut for<br/>&nbsp;&nbsp;&nbsp;text, {value:"text_to_display"}
+								</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>text</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Displays text in script
+								box using specified parameters. Also pauses game by waiting for user input or 
+								timer expiration.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>value</b>:"text_to_display"</div>
+										<div class="description">Sets the text to be displayed.<br/>
+										<span style="color:#C00000">Update:</span> If "value" is a user variable id,
+										the contents of the user variable will be displayed.<br/>
+										<span style="color:#C00000">Update:</span> To display user variables within
+										the text, enclose it with '#', e.g. #var_name#.										
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>speaker</b>:"speaker_name"</div>
+										<div class="description">Displays a name tag at first line of script box.<br/>
+										<span style="color:#C00000">Update:</span> The default name tag font can be
+										set in configuration file.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>font</b>:"CSS_style_font_declaration"</div>
+										<div class="description">Sets the font to use when displaying text.<br/>
+										Declare as "weight size font-family color" in the given order.<br/>
+										TODO: support non-standard custom fonts with CSS3 font-face.<br/>
+										<span style="color:#C00000">Update:</span> The default box font can be
+										set in configuration file.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>align</b>:"left", "center", "right"</div>
+										<div class="description">Sets the text alignment for the script box. Default
+										is "left".</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>offset</b>:[x, y]</div>
+										<div class="description">Text offset from top-left of script box. Default
+										is [10, 20] as used in "dim" box.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>append</b>:boolean (true/false)</div>
+										<div class="description">When true, text is appended on same window.
+										Default is false.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>duration</b>:number</div>
+										<div class="description">Number of seconds to pause. Default is zero
+										or wait for user input.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>effects</b>:"effects_name"</div>
+										<div class="description">Effects to display on script box.<br/>
+										Supported effects<br/>
+										- "none" (default)<br/>
+										- "fade" (fades the text in)<br/>
+										- "scroll" (scrolls the text for credits)<br/></div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>voice</b>:"path_to_sound_file_no_extension"</div>
+										<div class="description">Voice dub if any. Only if 'value' is not empty</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							Text is displayed as given below.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	/* Display text using font settings given */
+	text, {value:"This is first sample text.", font:"bold 16px 'Courier New' white"},
+	/* Text is appended without closing script box */
+	text, {value:"This is next text on same window.", append:true},
+	/* Text is appended again, waits for 5 seconds and appends next line */
+	text, {value:"This is next text on same window.", duration:5},
+	/* Note, this text call just uses a simple string to add the text */
+	text, "This is next text after timer expiration.",
+	/* Text is displayed on new window */
+	text, {value:"This is next text on new window.", append:false},
+	/* Text with name tag is displayed on new window */
+	text, {value:"This is ME speaking.", speaker:"ME"},
+	/* Some formatting:
+		\n - displays a new line in text
+		\ at end of line to continue long text at next line
+	*/
+	text, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, \
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n \
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
+ut aliquip ex ea commodo consequat.\n Duis aute irure dolor in reprehenderit \
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n Excepteur \
+sint occaecat cupidatat non proident, sunt in culpa qui officia \
+deserunt mollit anim id est laborum.",
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

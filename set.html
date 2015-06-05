@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>set</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Sets a user variable.
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>set</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Sets a user variable as specified.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">Can be multiple</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>name</b>:value</div>
+										<div class="description">name is the user variable id.<br/>
+										value can be number, boolean (true/false), string or variable_id to set
+										the given variable.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts array (e.g. [1,2,3]) as
+										user variable value.<br/>
+										<span style="color:#C00000">Update:</span> If value is null, variable is deleted.<br/>
+										<span style="color:#C00000">Update:</span> If name is prefixed with '$', the variable
+										becomes persistent, i.e. it retains its value and is not overwritten on a checkpoint load. 
+										Once set as persistent, the '$' prefix becomes optional when accessing the variable. Also, 
+										persistency can	not be unset, but the variable can still be nulled and deleted.</div>
+										<span style="color:#C00000">Update:</span> Supports "!" or negation operator for boolean variables.<br/>
+										<span style="color:#C00000">Update:</span> If value contains the keyword "random", a non-integer
+										random number between the supplied minimum and maximum value is generated. (see sample below)<br/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							The following user variables are set as given.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	/* Three variables named var1, var2 and var3 are set simultaneously 
+	   to a boolean, number and string values respectively.
+	*/
+	set, {var1:true, var2:1, var3:"hello world"},
+	...
+	/* var4 is set to var2 value. Note the double-quotes in var2 name. */
+	set, {var4:"var2"},
+	...
+	/* adds 10 to var4 value */
+	/* note valid operators are +, -, *, /, % and !
+	   so regular string vars should not contain these */
+	set, {var4:"+10"},
+	set, {var1:"!"},	/* toggles var1 to false */
+	...
+	/* Set var5 as a 4-element array */
+	set, {var5:[1,2,true,"string"]},
+	/* append to array, var5 now has 5 elements */
+	set, {var5:"new value"},
+	...
+	/* Set a persistent variable */
+	set, {$var6:false},
+	jump, {var6:true, label:"label1"},
+	/* jump is not executed because var6 is false */
+	...
+	/* Set a random value between 0 and 100 */
+	set, {var7:"random 0 100"},	
+	/* if min & max is not given, value is between 0 and 1 */
+	set, {var7:"random"},
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

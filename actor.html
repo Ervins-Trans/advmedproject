@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+	    <link rel="shortcut icon" href="favicon.ico" />    
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>actor</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Creates an actor and/or display dialog in script box.
+					</p>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>actor</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description">Creates an actor with one or
+								more sprites and displays both the character and dialog on screen.<br/>
+								Actors are bottom-center aligned and are auto-positioned on the screen by default.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>"actor_id"</b>, {params...}</div></td>
+								<td class="nameDescription"><div class="description"><span style="color:#C00000">Update: </span>Shortcut for <br/>
+								actor, {id:"actor_id", params...}<br/>
+								where "actor_id" is the id/name of the actor. The actor must have been previously defined before using this shortcut.</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>"actor_id"</b>, "some_text"</div></td>
+								<td class="nameDescription"><div class="description"><span style="color:#C00000">Update: </span>Shortcut for <br/>
+								actor, {id:"actor_id", say:"some_text"}<br/>
+								where "actor_id" is the id/name of the actor and "some_text" is the dialog to say. The actor must have been previously defined before using this shortcut.</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>id</b>:"actor_id"</div>
+										<div class="description">A unique identifier for the actor.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>sprite</b>:["tag", "path_to_sprite_file", "vertical_alignment"]</div>
+										<div class="fixedFont"><b>sprite</b>:["tag", "path_to_sprite_file", "vertical_alignment", frames, fps, repetitions]</div>
+										<div class="fixedFont"><b>sprite</b>:"tag"</div>
+										<div class="description">Tag is the identifier of the sprite, sprite file
+										is the filename of the image file to use as actor sprite.<br/>
+										Actors can have multiple sprites, but declare each one at a time as needed,
+										to minimize load time. Each declared sprite for the actor are identifiable
+										using "tag".<br/>
+										<span style="color:#C00000">Update:</span> Once declared, the sprite can be accessed just by specifying the "tag".
+										For example, when reusing the sprite.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts a user variable as
+										path to sprite file.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts an optional third parameter
+										specifying the vertical alignment of the sprite. Valid values are "floor" (default if not given),
+										"bottom", "center", "top" and "roof".<br/>FLOOR and ROOF offsets the sprite according
+										to actorYPosition in Config file.<br/>BOTTOM and TOP aligns the sprite to the corresponding 
+										edge of the viewport.<br/>CENTER puts the sprite in center.<br/>
+										<span style="color:#C00000">Update:</span> Now supports animated sprites. Parameters
+										should be given as <br/>["tag", "path_to_sprite_file", "vertical_alignment", frames, fps, repetitions]<br/>
+										where <i>frames</i> is the number of frames/sprites in a horizontal filmstrip defined by <i>path_to_sprite_file</i>,<br/>
+										<i>fps</i> is the animation frames per second, and <br/><i>repetitions</i> is the number of animation loops (default is -1 or
+										infinite repetitions).<br/> Note that <i>vertical_alignment</i>, <i>frames</i>, <i>fps</i> and <i>repetitions</i> are all 
+										optional. See also Sprites demo.<br/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>avatar</b>:["tag, "path_to_avatar_file"]</div>
+										<div class="fixedFont"><b>avatar</b>:"tag"</div>
+										<div class="fixedFont"><b>avatar</b>:"path_to_avatar_file"</div>
+										<div class="fixedFont"><b>avatar</b>:["tag, "path_to_avatar_file", frames, fps, repetitions]</div>
+										<div class="description">Display a small image of actor in script box.<br/>
+										<span style="color:#C00000">Update:</span> Displaying avatars need to
+										be enabled in configuration file (on by default).<br/>
+										<span style="color:#C00000">Update:</span> Now accepts a user variable as
+										path to avatar file.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts a tag name, just as in
+										sprites. To use a previously declared avatar, use the tag name only.<br/>
+										<span style="color:#C00000">Update:</span> For compatibility, specifying avatars
+										as an image file without tag is retained. These avatars however can not
+										be accessed by tags.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts a multi-frame filmstrip image to
+										create an animated avatar, similar to sprites.<br/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>nick</b>:"actor_nickname"</div>
+										<div class="description">Name to be displayed in script box. If nick is not
+										provided, the id is used.<br/>
+										<span style="color:#C00000">Update:</span> Now accepts a user variable as nick,
+										for use when player provides a name.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Actor creation only.</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>color</b>:"nickname_color"</div>
+										<div class="description">The color of the nickname when displayed.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>position</b>:"position_of_actor"</div>
+										<div class="description">Sets the position of the actor, default is "auto".<br/>
+										"auto" - auto-positions actor on viewport<br/>
+										"left" - positions actor on left side of viewport<br/>
+										"right" - positions actor on right side of viewport<br/>
+										"center" - positions actor on middle side of viewport<br/>
+										<strike>"back" - positions actor behind other actors</strike><br/>
+										<strike>"front" - positions actor in front of other actors</strike><br/>
+										<strike>"[left | right | center] [back | front]" - combination of options</strike><br/>
+										<span style="color:#C00000">Deprecated:</span> See 'z_order'.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>z_order</b>:number</div>
+										<div class="description">This sets the Z-order of the actors. By default, all actors
+										are given a Z-order of 0, and are drawn in the order they were created. A negative
+										Z-order value puts the actor behind, while a positive Z-order puts the actor in
+										front. For best effects, use integer Z-order from -9 to 9.<br/>
+										Note: Z-order is also used when actorPerspective is set in Config file. A value of
+										-10 and below makes the actor move with or slower than the background. A value of 10
+										and above is not supported.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>show</b>:boolean (true/false)</div>
+										<div class="description">Displays or hides actor sprite. Upon creation or
+										adding new sprite, it is automatically set to true.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>effect</b>:"effect_name [args]"</div>
+										<div class="description"><span style="color:#C00000">Update:</span> 
+										Effect when showing or hiding sprites.<br/>
+										Supported effects:<br/>
+										- "none" (default)<br/>
+										- "dissolve"<br/>
+										- "fade"<br/>
+										- "ghost" (a semi-transparent graphic)<br/>
+										- "left" | "right" | "top" | "bottom" (slides the actor graphic to and from
+										the specified direction)<br/>
+										- "scale scale_value" (scales the actor graphic relative to base size)<br/>
+										- "rotate rotate_value" (rotate the actor graphic in degrees clockwise 
+										relative to previous orientation)<br/>
+										- "translate x_value y_value" (translate the actor graphic according to the
+										given values relative to current position; applies only if actor is not 
+										"auto" positioned)<br/>
+										<span style="color:#C00000">Update:</span> The 'scale', 'rotate' and 'translate'
+										arguments now accept a user variable id.<br/>
+										<span style="color:#C00000">Update:</span> A 'nowait' argument, e.g. "fade nowait",
+										can now be added to continue without waiting for effects to complete.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>time</b>:number</div>
+										<div class="description">Duration of effect.</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>say</b>:"text_to_display"</div>
+										<div class="fixedFont"><b>balloon</b>:"text_to_display"</div>
+										<div class="description">Text to be displayed in script box. This automatically
+										adds the name tag to the box (like "text" with "speaker" parameter). Script
+										box and text settings (such as fonts) are carried over here.<br/>
+										<span style="color:#C00000">Update:</span> If "value" is a user variable id,
+										the contents of the user variable will be displayed.<br/>
+										<span style="color:#C00000">Update:</span> To display user variables within
+										the text, enclose it with '#', e.g. #var_name#.<br/>
+										<span style="color:#C00000">Update:</span> 'balloon' displays the text in a
+										speech balloon. Name tag and avatar are not displayed in a speech balloon.
+										The fill and stroke style, as well as the size of the speech balloon, can be
+										set in Config file.
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional, Persistent</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>append</b>:boolean (true/false)</div>
+										<div class="description">Appends text in same window. (same as append
+										in "text")</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>remove</b>:"sprite_tag" or "actor"</div>
+										<div class="description">If a sprite tag is given, the sprite is removed
+										from the list of actor sprites. If keyword "actor" is given, the
+										actor is removed from the list of characters.<br/>
+										If the actor or sprite being removed is currently displayed, actor or
+										sprite is hidden automatically.<br/>
+										An actor should have at least one sprite, so its last sprite can not be removed.</div>
+									</td>
+								</tr>							
+								<tr>
+									<td class="attributes">Optional</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>voice</b>:"path_to_sound_file_no_extension"</div>
+										<div class="description">Voice dub if any. Only if 'say' is not empty</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							Actor1 is displayed on the stage as given below.
+						</div>
+						<pre class="code">  
+chapter = [
+
+	...
+	/* Create and display actor1 without saying anything but set with a red name tag */
+	actor, {id:"actor1", nick:"Me", color:"#ff0000", sprite:["normal", "images/actor1-normal.png"], effect:"dissolve"},
+	...
+	/* Let actor1 say something which automatically opens script box */
+	actor, {id:"actor1", say:"Hello world!"},
+	...
+	/* Hides actor1 */
+	actor, {id:"actor1", show:false},
+	...
+	/* Add a new sprite to actor1 and automatically display actor.
+	   The text lines are appended because of append. */
+	actor, {id:"actor1", sprite:["smile", "images/actor1-smile.png"], say:"Hello again!"},
+	actor, {id:"actor1", say:"And again!", append:true},
+	...
+	/* Use actor shortcut to display a dialog */
+	"actor1", "Goodbye!",
+	...
+	/* The sprite with tag "normal" is removed */
+	actor, {id:"actor1", remove:"normal"},
+	...
+	/* Actor1 is permanently removed off the stage,
+	   Note the "actor" after remove is a predefined keyword for removing the whole character */
+	actor, {id:"actor1", remove:"actor"};
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+

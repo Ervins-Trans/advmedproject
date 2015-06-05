@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Visual Novel Engine for HTML5 Canvas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		<link rel="stylesheet" href="css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="css/screen.css" media="screen and (min-width: 661px)" />
+		<link rel="shortcut icon" href="favicon.ico" />  
+
+		<script src="javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<div class="index">
+		<div class="menu">
+			<div class="indexLinks">
+				<a href="toc.html">Index</a>
+				<a href="files.html">Files</a>
+			</div>
+			<h2 class="heading1">Navigation</h2>
+			<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+			<nav>
+				<ul class="classList" id="ClassList">
+					INTRODUCTION<br/>
+					<li><a href="index.html">Intro</a></li>
+					<li><a href="start.html">Getting started</a></li>
+					<li><a href="config.html">Config file</a></li>
+					<li><a href="plugins.html">Plug-ins</a></li>
+					<li><a href="mods.html">Mod pack<span style="color:#C00000"> New!</span></a></li>
+					<li><a href="demo.html">Demo</a></li>
+					ELEMENTS<br/>
+					<li><a href="actor.html">actor</a></li>
+					<li><a href="atmosphere.html">atmosphere</a></li>
+					<li><a href="audio.html">audio</a></li>
+					<li><a href="box.html">box</a></li>
+					<li><a href="menu.html">menu</a></li>
+					<li><a href="overlay.html">overlay</a></li>
+					<li><a href="scene.html">scene</a></li>
+					<li><a href="text.html">text</a></li>
+					<li><a href="video.html">video</a></li>
+					FLOW CONTROL<br/>
+					<li><a href="jump.html">jump</a></li>
+					<li><a href="label.html">label</a></li>
+					<li><a href="wait.html">wait</a></li>
+					FORMS<br/>
+					<li><a href="cform.html">cform</a></li>
+					<li><a href="form.html">form</a></li>
+					<li><a href="button.html">button</a></li>
+					<li><a href="checkbox.html">checkbox</a></li>
+					<li><a href="fieldset.html">fieldset</a></li>
+					<li><a href="input.html">input</a></li>
+					<li><a href="marquee.html">marquee</a></li>
+					<li><a href="picture.html">picture</a></li>
+					<li><a href="radio.html">radio</a></li>
+					<li><a href="select.html">select</a></li>
+					<li><a href="slider.html">slider</a></li>
+					<li><a href="spinbox.html">spinbox</a></li>
+					<li><a href="submit.html">submit</a></li>
+					<li><a href="textarea.html">textarea</a></li>
+					<li><a href="timer.html">timer</a></li>
+					NAVIGATION<br/>
+					<li><a href="automap.html">automap</a></li>					
+					<li><a href="map.html">map</a></li>
+					<li><a href="tile.html">tile</a></li>
+					MISC<br/>
+					<li><a href="animation.html">animation</a></li>
+					<li><a href="checkpoint.html">checkpoint</a></li>
+					<li><a href="get.html">get</a></li>
+					<li><a href="set.html">set</a></li>
+					<li><a href="macro.html">macro</a></li>
+					<li><a href="preload.html">preload</a></li>
+					<li><a href="screen.html">screen</a></li>
+					DEBUGGING<br/>
+					<li><a href="message.html">message</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="fineprint" style="clear:both">
+			<footer>
+			<!--Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />-->
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 
+			for <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a><br />		
+			</footer>
+		</div>
+	</div>
+	<div class="index indexStatic"></div>
+	<div class="content">
+		<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle"><span>checkpoint</span></h1>	
+				<div class="intro">
+					<p class="description summary">
+					Marks a position in the script as a checkpoint for saving/loading.</p>
+					<ul class="summary">
+						<li><span style="color:#C00000">Update:</span> Now supports named checkpoints
+							by setting gameNamedCheckpts in Config file (unset/false by default).</li>
+						<li>By using named checkpoints, the game developer can specify which checkpoint
+							to load. This is useful for example when a player, upon reaching a bad ending,
+							is allowed to return to a specific location in the plot, to redo the story
+							and make different choices.</li>
+						<li>However, due to its nature, named checkpoints are not compatible with
+							previous checkpoint saves.</li>
+						<li>Note also that local storage is not unlimited, and using multiple checkpoints
+							will cause localStorage usage to increase. So use named checkpoints efficiently
+							and sparingly. Whenever possible, use clear to delete a checkpoint.</li>
+					</ul>
+				</div>
+			</header>
+			<section>
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="message keyword summary">
+						<caption class="sectionTitle">Syntax</caption>
+						<tbody>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>checkpoint</b>, "save"</div></td>
+								<td class="nameDescription"><div class="description">Saves the game at the current checkpoint.<br/>
+								<span style="color:#C00000">Update:</span> Still works regardless of gameNamedCheckpts setting.</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>checkpoint</b>, "load"</div></td>
+								<td class="nameDescription"><div class="description">Loads a previously saved checkpoint. Should
+								only be used at start of game.<br/>
+								<span style="color:#C00000">Update:</span> Still works regardless of gameNamedCheckpts setting.</div></td>
+							</tr>
+							<tr>
+								<td class="attributes"><div class="fixedFont"><b>checkpoint</b>, {param}</div></td>
+								<td class="nameDescription"><div class="description"><span style="color:#C00000">Update:</span> 
+								Perform action on named checkpoint. Only if gameNamedCheckpts is set in Config file.<br/>
+								Parameters are given as {param:value, param:value, ...}</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section>
+				<nav>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="scene parameters summary">
+						<caption class="sectionTitle">Parameter Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Attributes</th>
+									<th scope="col">Parameter Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>		
+								<tr>
+									<td class="attributes">Use only if gameNamedCheckpts is set</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b>load</b>:"checkpt_name"</div>
+										<div class="fixedFont"><b>save</b>:"checkpt_name"</div>
+										<div class="fixedFont"><b>clear</b>:"checkpt_name"</div>
+										<div class="description">checkpt_name is the checkpoint id.<br/>
+										LOAD loads a previously set checkpoint of the given name.<br/>
+										SAVE saves the current game at the specified checkpoint.<br/>
+										CLEAR clears the given checkpoint.<br/><br/>
+										Note: Even though there's no code difference between a named and an unnamed
+										checkpoint load, their intended use is different.<br/>An unnamed checkpoint
+										is usually for loading/continuing at the start of the game, so the game is
+										practically starting without resources loaded or variables set. <br/>However, a
+										named checkpoint may be loaded somewhere down the line. At this point, there
+										are resources loaded or variables set. If not handled properly, references
+										to these resources may be lost when the named checkpoint is loaded, and at
+										the worst case, may result in memory leakage. A manual resource management
+										is recommended prior to loading the named checkpoint.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<div class="details props">
+					<div class="innerProps">
+						<h2 class="sectionTitle">Example</h2>
+						<div class="description">
+							The game is automatically saved at the checkpoint. Note: "save" is a predefined parameter.
+						</div>
+						<pre class="code">  
+chapter = [
+	/* As a requirement for saves, we need to use a label to
+	identify the script; in this case, we use a "chapter" label
+	as the first keyword-value pair (which is same as the object
+	name). However, it is good practice to label all script chapters. */
+	label, "chapter",
+
+	...
+	checkpoint, "save",
+	...
+	
+];
+						</pre>
+						<div class="description">
+							A new game is started or a saved game is loaded using "menu". Note: "load" is a predefined parameter.
+						</div>
+						<pre class="code">  
+chapter = [
+	label, "chapter",
+
+	...
+	menu, [ "",
+			"Start a new game", "label1",
+			"Continue game", "label2" ],
+			
+	label, "label2",
+	checkpoint, "load",
+	/* Note, "load" automatically jumps to saved checkpoint */
+	
+	label, "label1",
+	/* Start a new game here */
+	...
+	
+];
+						</pre>
+						<div class="description">
+							The game creates a named checkpoint "go_back_here", then loads or clear the checkpoint depending
+							on which branch of the story the player followed.
+						</div>
+						<pre class="code">  
+chapter = [
+	label, "chapter",
+	...
+	checkpoint, {save:"go_back_here"},
+	...
+	/* game forks here between good_choice and bad_choice */
+	...
+	label: "bad_choice",
+	/* allow the player to return */
+	/* unload resources not needed here */
+	checkpoint, {load:"go_back_here"},
+	...
+	label: "good_choice",
+	/* checkpoint is no longer needed */
+	checkpoint, {clear:"go_back_here"},
+	...
+];
+						</pre>
+					</div>
+				</div>
+			</section>			
+		</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		wbos.CssTools.MediaQueryFallBack.LoadCss('css/screen.css', 'css/handheld.css', 660)
+		codeview.classFilter.Init()
+	</script>
+	
+	</body>
+</html>
+
